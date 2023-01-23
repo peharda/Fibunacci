@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Fibunacci</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+
+			
+			function werte(anzahl) {
+                let Zahl1
+				let vX=1;
+                let vY=0;
+                let count = 1;
+                let vOutput = "";
+                vOutput = "Jetzt kommt eine Wertetabelle...<br>";
+				vOutput = vOutput + "<table border=1>";
+				vOutput = vOutput + "<tr><th>Fib(n)</td></td></tr>";
+							
+				
+				while (vX <=anzahl) {
+				Zahl1 = vY + count;
+                vY = count;
+				vOutput = vOutput + "<tr><td>" + vX + "</td></td>";
+				vX = vX + 1
+
+				}
+
+                vOutput = vOutput + "</table>";
+
+                return vOutput;
+				
+				
+			
+			}
+			
+			function clicked() {
+				let input = document.getElementById("idInput").value;
+				let vAusgabe="";
+				vAusgabe = vAusgabe + werte(input);
+				document.getElementById("idAusgabe").innerHTML = vAusgabe;
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<h1>Fibunacci</h1>
+		Eingabe: <input id="idInput" type="text" value="20"><br /><br />
+		<button onClick="clicked();">Berechne etwas!</button><br /><br />
+		<div id="idAusgabe">Hier kommt beim Klicken auf den Button eine Ausgabe.</div>
+	</body>
+</html>
